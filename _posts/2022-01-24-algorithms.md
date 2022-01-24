@@ -1,25 +1,28 @@
 ---
-layout: post
 title: [프로그래머스] 무지의 먹방 라이브
-date: 2022-01-24 20:00 +0800
-last_modified_at: 2022-01-24 20:00:00 +0800
-tags: [programmers, binary_search]
-toc:  true
+categories: 
+  - algorithms_study
+tags: 
+  - programmers
+  - binary_search
+toc: true
 ---
-해당 문제는 "이것이 코딩 테스트다"에서 그리디 문제로 분류 되어 있었고, 따라서 그리디로 해결하려 노력했던 문제이다. 
-{: .message }
 
-## 풀기 전 생각 정리
+### 풀기 전 생각 정리
+
+---
+
 1) 시간 k를 기준으로 while문을 반복적으로 돌려, k가 1씩 증가함에 따라 food_times를 갱신하자.
-==> 효율성 테스트에서 k의 범위는 1 <= k <= 2*10^13 이므로 불가능한 아이디어
+- 효율성 테스트에서 k의 범위는 1 <= k <= 2*10^13 이므로 불가능한 아이디어
 
 2) 원소의 크기 범위가 1 <= 원소 크기 <= 100,000,000이므로 k와 가까운 값을 찾기 위해 기준이 되는 원소 크기를 구해보자. 
-==> 이분 탐색을 통해 구현해보는 것으로 채택
+- 이분 탐색을 통해 구현해보는 것으로 채택
 
+### 코드
 
-### Code
+---
 
-{% highlight js %}
+```python
 def solution(food_times, k):
     ft_len = len(food_times)
 
@@ -65,6 +68,4 @@ def solution(food_times, k):
             k -= 1
         if k == -1:
             return i+1
-
-
-{% endhighlight %}
+```
