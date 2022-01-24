@@ -11,6 +11,7 @@ toc:  true
 ## 풀기 전 생각 정리
 1) 시간 k를 기준으로 while문을 반복적으로 돌려, k가 1씩 증가함에 따라 food_times를 갱신하자.
 ==> 효율성 테스트에서 k의 범위는 1 <= k <= 2*10^13 이므로 불가능한 아이디어
+
 2) 원소의 크기 범위가 1 <= 원소 크기 <= 100,000,000이므로 k와 가까운 값을 찾기 위해 기준이 되는 원소 크기를 구해보자. 
 ==> 이분 탐색을 통해 구현해보는 것으로 채택
 
@@ -18,12 +19,6 @@ toc:  true
 ### Code
 
 {% highlight js %}
-// Example can be run directly in your JavaScript console
-
-// Create a function that takes two arguments and returns the sum of those arguments
-var adder = new Function("a", "b", "return a + b");
-
-// Call the function
 def solution(food_times, k):
     ft_len = len(food_times)
 
@@ -37,7 +32,7 @@ def solution(food_times, k):
     # 이분 탐색으로 어느 숫자가 k에 가깝게 만들어 주는지 찾음
     start = 1
     end = 100000000
-    
+
     while start <= end:
         mid = int((start+end)/2)
         count = 0
@@ -70,3 +65,5 @@ def solution(food_times, k):
         if k == -1:
             return i+1
 
+
+{% endhighlight %}
