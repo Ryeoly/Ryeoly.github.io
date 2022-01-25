@@ -1,6 +1,6 @@
 # Setup
-title: Ryeoly bloge
-description: A simple, beautiful, and powerful Jekyll theme for blogs
+title: Ryeoly blog
+description: 끄적거리는 공간
 url: https://Ryeoly.github.io
 avatar: /avatar.jpeg
 paginate: 5
@@ -29,12 +29,13 @@ exclude:
 
 # Optimize Jekyl SEO Tag
 twitter:
-  username: Deuk Ryeol
+  username: vszhub
   card: summary
 logo: logo.png
 social:
   name: Deuk Ryeol
   links:
+    - https://twitter.com/vszhub
     - https://github.com/Ryeoly
 google_site_verification: xxxxx
 lang: en
